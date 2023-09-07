@@ -17,7 +17,7 @@ stopflg = False
 prtmode = False
 
 # tile_size = 25 # 描画タイルのサイズ
-tile_size = 50 # 描画タイルのサイズ
+tile_size = 30 # 描画タイルのサイズ
 
 block_percent = 4 #ブロックを増やす割合
 
@@ -26,7 +26,7 @@ g.px = 2
 g.py = 2
 
 player_image = "icons\icon_robot_red.png" # プレイヤーの画像ファイル
-# player_image = "icons\icon_robot_red_25.png" # プレイヤーの画像ファイル
+player_image = "icons\icon_robot_red_25.png" # プレイヤーの画像ファイル
 
 iconfile_wall = "icons\icon_wall.png"
 iconfile_steps = "icons\icon_steps.png"
