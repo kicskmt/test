@@ -1,6 +1,6 @@
 import numpy as np
-import matplotlib.pyplot as plt
-from sklearn import datasets
+# import matplotlib.pyplot as plt
+# from sklearn import datasets
 import random
 import csv
 import maze_play_ai3
