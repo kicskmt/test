@@ -352,14 +352,7 @@ def draw_map(cv, data):
                     fill=color, # 塗色
                     outline="black", width=2) # 枠線
             #★★★★下を修正★★★★★
-            # if p == 1:
-            #     draw_wall(cv, x1, y1)
-            # if p == 2:
-            #     draw_waap(cv, x1, y1)
-            # if p == 3:
-            #     draw_shiro(cv, x1, y1)
-            # if p == 0:
-            #     draw_sougen(cv, x1, y1)
+
 
 
 # 描画関連
