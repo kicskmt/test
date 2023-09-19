@@ -6,6 +6,7 @@ import global_value as g
 from tkinter import *
 from neural_network_mlp import *
 import time
+import os
 
 movetime = 1 
 maxturn = 100 #最大ターン数
@@ -17,7 +18,7 @@ stopflg = False
 prtmode = False
 
 # tile_size = 25 # 描画タイルのサイズ
-tile_size = 50 # 描画タイルのサイズ
+tile_size = 30 # 描画タイルのサイズ
 
 block_percent = 4 #ブロックを増やす割合
 
@@ -26,7 +27,7 @@ g.px = 2
 g.py = 2
 
 player_image = "icons\icon_robot_red.png" # プレイヤーの画像ファイル
-# player_image = "icons\icon_robot_red_25.png" # プレイヤーの画像ファイル
+player_image = "icons\icon_robot_red_25.png" # プレイヤーの画像ファイル
 
 iconfile_wall = "icons\icon_wall.png"
 iconfile_steps = "icons\icon_steps.png"
@@ -51,6 +52,8 @@ def load_wall(cv):
 
 
 def main():
+    os.chdir(os.path.dirname(os.path.abspath(__file__))) # カレントディレクトリを移動する
+
     global map_data
     # 迷路データを読み込む
     #★★★★下を修正★★★★★
@@ -352,14 +355,7 @@ def draw_map(cv, data):
                     fill=color, # 塗色
                     outline="black", width=2) # 枠線
             #★★★★下を修正★★★★★
-            # if p == 1:
-            #     draw_wall(cv, x1, y1)
-            # if p == 2:
-            #     draw_waap(cv, x1, y1)
-            # if p == 3:
-            #     draw_shiro(cv, x1, y1)
-            # if p == 0:
-            #     draw_sougen(cv, x1, y1)
+
 
 
 # 描画関連

@@ -6,6 +6,7 @@ import global_value as g
 from tkinter import *
 #import nerural_network_9 from *
 from neural_network_mlp import *
+import os
 
 movetime = 1
 maxturn = 100
@@ -51,6 +52,8 @@ def load_wall(cv):
     # draw_wall(canvas)
 
 def main():
+    os.chdir(os.path.dirname(os.path.abspath(__file__))) # カレントディレクトリを移動する
+
     global map_data
     # 迷路データを読み込む
     map_data = load_map_from_tsv("maze5.tsv")

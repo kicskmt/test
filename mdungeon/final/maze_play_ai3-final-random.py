@@ -6,6 +6,7 @@ import global_value as g
 from tkinter import *
 from neural_network_mlp import *
 import time
+import os
 
 
 movetime = 1 
@@ -37,7 +38,7 @@ iconfile_robot = "icons\icon_robot_red.png"
 iconfile_renga = "icons\icon_renga.png"
 iconfile_shiro = "icons\icon_shiro2.png"
 
-map_file = "maze5.tsv"
+map_file = "maze4.tsv"
 
 # プレイヤーの画像を読み込む --- (*3)
 def load_wall(cv):
@@ -52,6 +53,8 @@ def load_wall(cv):
 
 
 def main():
+    os.chdir(os.path.dirname(os.path.abspath(__file__))) # カレントディレクトリを移動する
+
     global map_data
     # 迷路データを読み込む
     #★★★★下を修正★★★★★
