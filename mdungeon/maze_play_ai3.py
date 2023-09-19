@@ -6,6 +6,7 @@ import global_value as g
 from tkinter import *
 from neural_network_mlp import *
 import time
+import os
 
 movetime = 1 
 maxturn = 100 #最大ターン数
@@ -51,6 +52,8 @@ def load_wall(cv):
 
 
 def main():
+    os.chdir(os.path.dirname(os.path.abspath(__file__))) # カレントディレクトリを移動する
+
     global map_data
     # 迷路データを読み込む
     #★★★★下を修正★★★★★
