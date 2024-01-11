@@ -36,10 +36,10 @@ g.py = 2
 g.goalx = 0
 g.goaly = 0
 
-if tile_size == 25:
-    player_image = "icons\icon_robot_red_25.png" # プレイヤーの画像ファイル
-else:
+if tile_size == 50:
     player_image = "icons\icon_robot_red.png" # プレイヤーの画像ファイル
+else:
+    player_image = "icons\icon_robot_red_25.png" # プレイヤーの画像ファイル
 
 iconfile_wall = "icons\icon_wall.png"
 iconfile_steps = "icons\icon_steps.png"
