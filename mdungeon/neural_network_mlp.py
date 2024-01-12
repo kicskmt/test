@@ -3,7 +3,7 @@ import numpy as np
 # from sklearn import datasets
 import random
 import csv
-import maze_play_ai3
+# import maze_play_ai3
 import json
 from copy import deepcopy
 
@@ -273,5 +273,5 @@ class NeuralNetwork:
 
 
 
-if __name__ == "__main__": maze_play_ai3.main()
+# if __name__ == "__main__": maze_play_ai3.main()
 
