@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--link rel="stylesheet" href="/html/home01.css" type="text/css"-->
+<link rel="stylesheet" href="css/header.css" type="text/css"><!--#ヘッダ表示に必要-->
+<link rel="stylesheet" href="css/detail.css" type="text/css">
+<head>
+    <title>詳細画面</title>
+</head>
+<body>
+
+  <div id="header"></div>
+  <script>
+    fetch("templates/header.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("#header").innerHTML = data);
+  </script>
+
+
+  <h1>詳細画面</h1>
+  <form>
+  <!--form action="/sampleform2" method="POST"-->
+
+    <table>
+      {% for column in columns %}
+      <tr>
+        <td><label>{{ columns[loop.index-1] }}</label></td>
+        <td>{{ person[loop.index-1] }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+
+    <button type="button" style="font-size: 130%;" onclick="history.back()">前のページへ戻る</button>
+    <button style="font-size: 130%;"><a href="edit?id={{ person[0] }}">編集</a></button>
+
+  </form>
+
+</body>
+</html>

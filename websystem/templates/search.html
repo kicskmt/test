@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--link rel="stylesheet" href="/html/home01.css" type="text/css"-->
+<link rel="stylesheet" href="css/header.css" type="text/css">
+<link rel="stylesheet" href="css/main.css" type="text/css">
+<head>
+    <title>管理システムアプリケーション</title>
+
+    <div id="header"></div>
+    <script>
+      fetch("templates/header.html")
+        .then((response) => response.text())
+        .then((data) => document.querySelector("#header").innerHTML = data);
+    </script>
+</head>
+<body>
+
+    <!--<font size="7">管理システム（MS）一覧表示画面</font><br>-->
+    <h1>検索画面</h1>
+
+    <form action="/searchproc" method="GET">
+        <tr>
+            <h2>
+                <td><label>検索ワード</label></td>
+                <td><input type="text" name="searchword" style="font-size: 130%;"></td>
+                <button type="submit" style="font-size: 130%;">検索</button>
+                <br>
+            </h2>
+        </tr>
+    </form>
+
+    <style type="text/css">
+        a.widelink { display: block; }
+    </style>
+      
+    <table border = "1">
+        <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>よみがな</th>
+        </tr>
+        {% for row in results %}
+        <tr>
+            <td><a href="detail?id={{ row[0] }}" class="widelink">{{ row[0] }}</a></td>
+            <td>{{ row[1] }}</td>
+            <td>{{ row[2] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+ 
+</body>
+</html>

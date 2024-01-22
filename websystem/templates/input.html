@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ja">
+<!--link rel="stylesheet" href="css/home01.css" type="text/css"-->
+<link rel="stylesheet" href="css/header.css" type="text/css">
+<head>
+  <title>登録画面</title>
+  <div id="header"></div>
+  <script>
+    fetch("templates/header.html")
+      .then((response) => response.text())
+      .then((data) => document.querySelector("#header").innerHTML = data);
+  </script>
+</head>
+<body>
+
+  <h1>登録画面</h1>
+  <form action="/registproc" method="GET">
+
+    <table>
+      {% for column in columns %}
+      {% if column != 'id' %}
+      <tr>
+        <td><label style="font-size: 130%;">{{ columns[loop.index-1] }}</label></td>
+        <td><input type="text" name="data{{loop.index-1}}" style="font-size: 130%;"></td>
+      </tr>
+      {% endif %}
+      {% endfor %}
+    </table>
+
+    <br>
+    本当は↓のように一つ一つ設定する。<br>
+    <table>
+      <tr>
+        <td>
+          <label>名前</label>
+        </td>
+        <td>
+          <input type="text" name="name" id="namelabel" placeholder="例）鈴木　太郎">
+        </td>
+      </tr>
+
+      <tr>
+        <td>
+          <label>メールアドレス</label>
+        </td>
+        <td>
+          <input class="inputs" type="email" name="email" id="maillabel" placeholder="○○○.jp">
+        </td>
+      </tr>
+    </table>
+
+    <button type="submit" style="font-size: 130%;">送信</button>
+  </form>
+
+</body>
+</html>

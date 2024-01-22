@@ -1,0 +1,18 @@
+table {
+    border-collapse: separate;  /* 表の線と線の間を空ける */
+    border-spacing:  5px;       /* 表の線と線の間の幅 */
+}
+
+th,td {
+    padding: 5px 10px;          /* 余白指定 */
+}
+
+th {
+    background-color:  #3F51B5; /* 背景色指定 */
+    color:  #fff;               /* 文字色指定 */
+    font-weight:  normal;       /* 文字の太さ指定 */
+}
+
+td {
+    background-color:  #c0c9ff; /* 背景色指定 */
+}
