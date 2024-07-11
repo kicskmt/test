@@ -111,3 +111,7 @@ zipp                         3.18.1
 pip install tensorflow
 pip install Pillow
 pip install matplotlib
+
+
+pip freeze > requirements.txt
+pip install -r requirements.txt
