@@ -4,3 +4,5 @@ mdungeon/__pycache__/neural_network_mlp.cpython-39.pyc
 websystem/__pycache__/flask_common.cpython-39.pyc
 websystem/__pycache__/flask_sqlite.cpython-39.pyc
 websystem/db_test.db
+recognition/env/
+recognition/__pycache__
