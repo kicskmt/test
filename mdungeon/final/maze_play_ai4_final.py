@@ -37,20 +37,20 @@ g.goalx = 0
 g.goaly = 0
 
 if tile_size == 25:
-    player_image = "icons\icon_robot_red_25.png" # プレイヤーの画像ファイル
+    player_image = "../icons\icon_robot_red_25.png" # プレイヤーの画像ファイル
 else:
-    player_image = "icons\icon_robot_red.png" # プレイヤーの画像ファイル
+    player_image = "../icons\icon_robot_red.png" # プレイヤーの画像ファイル
 
-iconfile_wall = "icons\icon_wall.png"
-iconfile_steps = "icons\icon_steps.png"
-iconfile_sougen = "icons\icon_sougen.png"
-iconfile_sougen2 = "icons\icon_sougen2.png"
-iconfile_robot = "icons\icon_robot_red.png"
-iconfile_renga = "icons\icon_renga.png"
-iconfile_shiro = "icons\icon_shiro2.png"
+iconfile_wall = "../icons\icon_wall.png"
+iconfile_steps = "../icons\icon_steps.png"
+iconfile_sougen = "../icons\icon_sougen.png"
+iconfile_sougen2 = "../icons\icon_sougen2.png"
+iconfile_robot = "../icons\icon_robot_red.png"
+iconfile_renga = "../icons\icon_renga.png"
+iconfile_shiro = "../icons\icon_shiro2.png"
 
 #読み込むマップファイルを指定
-map_file = "maze5.tsv"
+map_file = "../maze5.tsv"
 
 # プレイヤーの画像を読み込む --- (*3)
 def load_wall(cv):

@@ -2,10 +2,6 @@ mdungeon/__pycache__/global_value.cpython-39.pyc
 mdungeon/__pycache__/maze_play_ai3.cpython-39.pyc
 mdungeon/__pycache__/neural_network_mlp.cpython-39.pyc
 mdungeon/__pycache__
-websystem/__pycache__/flask_common.cpython-39.pyc
-websystem/__pycache__/flask_sqlite.cpython-39.pyc
-websystem/db_test.db
-recognition/env/
-recognition/__pycache__
+mdungeon/final/__pycache__
 test1.eps
 test1.png
